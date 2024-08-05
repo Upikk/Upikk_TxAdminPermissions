@@ -11,7 +11,8 @@ AddEventHandler("txAdmin:events:adminAuth", function(data)
         print("Authenticated User: " .. playerId .. " setting permissions.")
         for permissionName, permissionTable in pairs(AllPermissions) do
             for index, permissionValue in pairs(permissionTable) do
-                fg.SetTempPermission(playerId, permissionName, permissionValue, true, true)
+                local result, errorText = fg.SetTempPermission(playerId, permissionName, permissionValue, true, true)
+                print(result, errorText)
             end
         end
     end
