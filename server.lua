@@ -6,7 +6,7 @@ AddEventHandler("txAdmin:events:adminAuth", function(data)
     local fg = exports[Config.FiveguardName]
 
     local AllPermissions = Config.Permissions
-
+    Wait(15000)
     if isAdmin then
         print("Authenticated User: " .. playerId .. " setting permissions.")
         for permissionName, permissionTable in pairs(AllPermissions) do
