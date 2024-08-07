@@ -1,18 +1,18 @@
+local res = GetCurrentResourceName()
+
+local AllPermissions = Config.Permissions
+
+ExecuteCommand("add_ace group.bypassPermGroup command allow")
+
+ExecuteCommand("add_principal resource." .. res .. " group.bypassPermGroup")
+
+for index, permissionValue in pairs(AllPermissions) do
+    ExecuteCommand("add_ace group.txFGGroup " .. permissionValue .. " allow")
+end
+
 AddEventHandler("txAdmin:events:adminAuth", function(data)
     local isAdmin = data.isAdmin
     if not isAdmin then return end
     local playerId = data.netid
-
-    local fg = exports[Config.FiveguardName]
-
-    local AllPermissions = Config.Permissions
-    Wait(15000)
-    if isAdmin then
-        print("Authenticated User: " .. playerId .. " setting permissions.")
-        for permissionName, permissionTable in pairs(AllPermissions) do
-            for index, permissionValue in pairs(permissionTable) do
-                fg:SetTempPermission(playerId, permissionName, permissionValue, true, true)
-            end
-        end
-    end
+    ExecuteCommand("add_principal identifier." .. GetPlayerIdentifier(playerId, 0) .. " group.txFGGroup")
 end)
