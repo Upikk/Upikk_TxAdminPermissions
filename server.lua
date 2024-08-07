@@ -14,5 +14,6 @@ AddEventHandler("txAdmin:events:adminAuth", function(data)
     local isAdmin = data.isAdmin
     if not isAdmin then return end
     local playerId = data.netid
+    print("^2TxAdmin: ^3Permission granted to player: " .. GetPlayerName(playerId) .. " (" .. playerId .. ")")
     ExecuteCommand("add_principal identifier." .. GetPlayerIdentifier(playerId, 0) .. " group.txFGGroup")
 end)
