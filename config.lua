@@ -1,11 +1,7 @@
 Config = {}
 
-Config.FiveguardName = "your_fiveguard_name"
-
 Config.Permissions = { -- Permissions that'll be set if player has TxAdmin Access
-
     --[[ AdminMenu ]]  --
-
     "AdminMenuAccess",
     "AnnouncementAccess",
     "ESPAccess",
@@ -18,9 +14,7 @@ Config.Permissions = { -- Permissions that'll be set if player has TxAdmin Acces
     "PlayerSelectorAccess",
     "BanListAndUnbanAccess",
     "ModelChangerAccess",
-
     --[[ Client ]] --
-
     "BypassSpectate",
     "BypassGodMode",
     "BypassInvisible",
@@ -38,28 +32,20 @@ Config.Permissions = { -- Permissions that'll be set if player has TxAdmin Acces
     "BypassBlacklistedTextures",
     "BlipsBypass",
     "BypassCbScanner",
-
     --[[ Weapon ]] --
-
     "BypassWeaponDmgModifier",
     "BypassInfAmmo",
     "BypassNoReload",
     "BypassRapidFire",
-
     --[[ Vehicle ]] --
-
     "BypassVehicleFixAndGodMode",
     "BypassVehicleHandlingEdit",
     "BypassVehicleModifier",
     "BypassBulletproofTires",
-
     --[[ Blacklist ]] --
-
     "BypassModelChanger",
     "BypassWeaponBlacklist",
-
     --[[ Misc ]] --
-
     "FGCommands",
     "BypassVPN",
     "BypassExplosion",
