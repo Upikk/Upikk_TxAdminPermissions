@@ -2,6 +2,8 @@ Config = {}
 
 Config.Debug = false
 
+Config.FiveguardResource = "fiveguard"
+
 Config.Permissions = { -- Fiveguard permissions that'll be assigned when the player has TxAdmin access
     "AdminMenuAccess",
     "AnnouncementAccess",
